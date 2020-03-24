@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Página pessoal</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <script>
+        const dadosPessois = "dados-pessoais";
+        const dadosAcademicos = "dados-academicos";
+        const historico = "historico";
+        const atividades = "atividades";
+        let relCount = 0;
+
+        window.addEventListener('load', () => {
+            relCount++;
+            if (relCount <= 0) location.reload();
+        });
+
+        window.addEventListener('load', () => {
+            const header = window.location.href;
+            const route = header.split("/")[3].toString();
+            switch (route) {
+                case dadosPessois:
+                    document.getElementById(dadosPessois).style.display = "visible";
+                    document.getElementById(dadosAcademicos).style.display = "none";
+                    document.getElementById(historico).style.display = "none";
+                    document.getElementById(atividades).style.display = "none";
+                    break;
+
+                case dadosAcademicos:
+                    document.getElementById(dadosAcademicos).style.display = "visible";
+                    document.getElementById(dadosPessois).style.display = "none";
+                    document.getElementById(historico).style.display = "none";
+                    document.getElementById(atividades).style.display = "none";
+                    break;
+
+                case historico:
+                    document.getElementById(historico).style.display = "visible";
+                    document.getElementById(dadosPessois).style.display = "none";
+                    document.getElementById(dadosAcademicos).style.display = "none";
+                    document.getElementById(atividades).style.display = "none";
+                    break;
+
+                case atividades:
+                    document.getElementById(atividades).style.display = "visible";
+                    document.getElementById(dadosPessois).style.display = "none";
+                    document.getElementById(dadosAcademicos).style.display = "none";
+                    document.getElementById(historico).style.display = "none";
+                    break;
+                default:
+                    document.getElementById(dadosPessois).style.display = "visible";
+                    document.getElementById(dadosAcademicos).style.display = "none";
+                    document.getElementById(historico).style.display = "none";
+                    document.getElementById(atividades).style.display = "none";
+                    break;
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <p id="welcome">Página pessoal de Guilherme Vieira</p>
+            <p id="campus">CP3003507 - IFSP CAMPINAS</p>
+        </header>
+        <div class="menu">
+            <nav class="nav-menu">
+                <div class="nav-item"><a class="nav-link" href="dados-pessoais">Dados Pessoais</a></div>
+                <div class="nav-item"><a class="nav-link" href="dados-academicos">Dados Acadêmicos</a></div>
+                <div class="nav-item"><a class="nav-link" href="historico">Histórico Profissional</a></div>
+                <div class="nav-item"><a class="nav-link" href="atividades">Atividades</a></div>
+            </nav>
+        </div>
+        <div class="body">
+            <div id="dados-pessoais">
+                <span class="page-title">Dados Pessoais</span>
+                <div class="page-item">
+                    <span class="item-key">Nome: </span>
+                    <span class="item-value">Guilherme Henrique Vieira Pinheiro</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">Idade: </span>
+                    <span class="item-value">22 Anos</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">Nascimento: </span>
+                    <span class="item-value">01/07/1997</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">Naturalidade: </span>
+                    <span class="item-value">Limeira - São Paulo</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">Nacionalidade: </span>
+                    <span class="item-value">Brasileiro</span>
+                </div>
+                <div id="foto">
+                    <img src="https://suap.ifsp.edu.br/media/alunos/150x200/150355.yfiBE3T8TOH3.jpg" />
+                </div>
+            </div>
+
+            <div id="dados-academicos">
+                <span class="page-title">Dados Acadêmicos</span>
+                <div class="page-item">
+                    <span class="item-key">Ensino Fundamental 1: </span>
+                    <span class="item-value">E.M.E.I.E.F Maria Thereza</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">Ensino Fundamental 2: </span>
+                    <span class="item-value">E.E Leovegildo Chagas Santos</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">Enino Médio: </span>
+                    <span class="item-value">COlégio Aprovado de Limeira</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">Pré-Vestibular: </span>
+                    <span class="item-value">Pandora Educacional Limeira</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">Ensino Superior: </span>
+                    <span class="item-value">IFSP</span>
+                </div>
+            </div>
+            <div id="historico">
+                <span class="page-title">Histórico Profissional</span>
+                <div class="page-item">
+                    <span class="item-key">Markinhos Freios</span>
+                    <span class="item-value">Mecânico Automotivo (2011-2013)</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">Brilhante Folheados</span>
+                    <span class="item-value">Auxiliar de Produção (2013-2015)</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">Triclass</span>
+                    <span class="item-value">Vendedor Externo (2017)</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">HST Card Technology</span>
+                    <span class="item-value">Estágio em Desenvolvimento (2019)</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-key">HST Card Technology: </span>
+                    <span class="item-value">Analista de Desenvolvimento (2020)</span>
+                </div>
+            </div>
+            <div id="atividades">
+                <span class="page-title">Atividades</span>
+                <div class="page-item">
+                    <span class="item-value">Linguagem C</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-value">C#</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-value">Java</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-value">Javascript</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-value">HTML</span>
+                </div>
+                <div class="page-item">
+                    <span class="item-value">CSS</span>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+
+        </footer>
+    </div>
+</body>
